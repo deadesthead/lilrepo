@@ -1,0 +1,16 @@
+PS1='\[\033[00;31m\]%\[\033[00m\] '
+#check window size
+shopt -s checkwinsize
+#eval "`dircolors -b ~.dircolorsrc`"
+#export LS_OPTIONS='--color=auto'
+export LANG=en_US.UTF-8
+export CLICOLOR=1
+export LSCOLORS=bxxxBxxBBx
+export EDITOR=vim
+
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \
+	source /usr/local/share/bash-completion/bash_completion.sh
+

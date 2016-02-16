@@ -1,0 +1,46 @@
+export LANG=en_US.UTF-8
+export CLICOLOR=1
+export LSCOLORS='bxxxBxxBBx'
+export EDITOR="vi"
+export MSF_DATABASE_CONFIG=/usr/local/share/config/database.yml
+
+setopt IGNORE_EOF
+
+setopt NO_BEEP
+
+#save the time and how long the command ran
+setopt EXTENDED_HISTORY
+#share history between shells
+setopt SHARE_HISTORY
+
+#if a line starts with a blank, ignore it
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+
+#set histfile, and size 
+HISTFILE=~/.history
+SAVEHIST=10000
+HISTSIZE=10000
+
+autoload -U colors && colors
+autoload -U promptinit
+PROMPT="%{$fg[red]%}>%{$reset_color%} "
+RPROMPT="%{$fg[red]%}<%{$reset_color%}"
+
+
+#aliases
+alias profa='torify profanity'
+alias alm='alsamixer'
+alias :q='exit'
+alias todo='vim ~/documents/arc/notes/to\ do
+alias irc='torify irssi'
+alias uzbl='uzbl-tabbed'
+alias mplayer='mplayer -ass'
+alias vids='cd ~/videos'
+alias pics='cd ~/pictures'
+alias downs='cd ~/downloads'
+alias books='cd ~/documents/books;
+alias docs='cd ~/documents'
+alias proj='cd ~/projects'
+alias cppp='cd ~/Projects/CPP/'
+alias compilecpp='cc -Wall -W -Werror -g -std=c++0x -o'

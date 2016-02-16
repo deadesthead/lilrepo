@@ -1,0 +1,53 @@
+colorscheme peachpuff
+
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+"Plugin 'Lokaltog/vim-powerline.git' 
+"Plugin 'SuperTab'
+Plugin 'BreakPts'
+Plugin 'genutils'
+Plugin 'kien/ctrlp.vim'
+"Plugin 'sjl/gundo.vim'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/syntastic'
+"disabling syntastic disables the sign columns in tex and most likely other
+"files
+Plugin 'scrooloose/nerdcommenter'
+"Plugin 'bling/vim-airline'
+call vundle#end()
+
+
+
+set nocompatible
+"set foldcolumn=0
+syntax on
+
+set relativenumber
+
+filetype plugin on
+
+"Set tab length
+set ts=4
+
+"Always show the current position
+set ruler
+
+"Show matching brackets
+set showmatch
+
+"For airline etc, shows a status line on the bottom
+set laststatus=2
+":nmap <C-M><C-M> :set norelativenumber<CR>
+function! TogNumber()
+	if(&relativenumber == 0)
+		set relativenumber
+	else
+		set norelativenumber
+	endif
+endfunc
+
+:nmap <C-N><C-N> :call TogNumber()<CR>
+:nmap <C-f> :NERDTreeToggle<CR>
+:nmap <C-B> <C-B> :exe ":sign unplace *"<CR>

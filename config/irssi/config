@@ -1,0 +1,60 @@
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    autoconnect = "no";
+  },
+  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
+  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
+  {
+    address = "46.239.208.105";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+chatnets = {
+  freenode = {
+    type = "IRC";
+    autosendcmd = "/msg nickserv ghost mynick mypass;wait 2200;/nick mynick;wait 2000";
+    /*autosendcmd= "/msg nickserv identify yourpasshereifyouhaveit";*/
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+  EFNet = { 
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  DALnet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "30";
+  };
+};
+channels = (
+  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#multirpg"; chatnet = "freenode"; autojoin = "yes"; }
+);
+settings = {
+  core = { real_name = "name"; user_name = "name"; nick = "nick"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    autocreate_own_query = "no";
+    autocreate_query_level = "DCCMSGS";
+    use_status_window = "no";
+    use_msgs_window = "no";
+    theme = "aka";
+    activity_hide_targets = "#multirpg";
+  };
+  "perl/core/scripts" = { neat_maxlength = "10"; };
+};
+hilights = (
+  { text = "nick"; nick = "yes"; word = "yes"; },
+);
+ignores = ( );
