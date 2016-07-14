@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="terminal emulator">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<item label="text editor">
+			<action name="Execute">
+				<execute>urxvt -e vim</execute>
+			</action>
+		</item>
+		<item label="web browser">
+			<action name="Execute">
+				<execute>firefox</execute>
+			</action>
+		</item>
+		<item label="file manager">
+			<action name="Execute">
+				<execute>urxvt -e ranger</execute>
+			</action>
+		</item>
+		
+		<!--<item label="Video Player">
+			<action name="Execute">
+				<execute>smplayer</execute>
+			</action>
+		</item>
+		-->
+      	<item label="music player">
+			<action name="Execute">
+			<execute>urxvt -e ncmpcpp</execute>
+			</action>
+		</item>
+		
+		<item label="mail">
+			<action name="Execute">
+				<execute>icedove</execute>
+			</action>
+		</item>
+		<item label="xmpp">
+		  <action name="Execute">
+		  <execute>urxvt -e torify profanity</execute>
+		  </action>
+		  </item>
+		
+		<item label="irc">
+		  <action name="Execute">
+		   <execute> urxvt -e torify irssi</execute>
+		  </action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<!-- <menu id="/Debian" />
+  <separator />
+  <menu id="client-list-menu" />-->
+<menu id="root-menu-36122" label="apps">
+
+	<item label="vmware">
+        <action name="Execute">
+		<execute>vmplayer</execute>
+		</action>
+	</item>
+	<item label="calculator">
+        <action name="Execute">
+		<execute>xcalc</execute>
+		</action>
+	</item>
+	<!--<item label="LxAppearance">
+		<action name="Execute">
+		<execute>lxappearance</execute>
+		</action>
+	</item>-->
+	<item label="wireshark">                        		  
+			<action name="Execute">
+		<execute>wireshark</execute>
+		</action>
+	</item>
+	<item label="transmission">
+	        <action name="Execute">
+		<execute>transmission-gtk</execute>
+		</action>
+	</item>
+	<item label="gimp">
+		<action name="Execute">
+		<execute>gimp</execute>
+		</action>
+	</item>
+        <!--<item label="Thunar">-->
+            <!--<action name="Execute">-->
+		<!--<execute>thunar</execute>-->
+		<!--</action>-->
+	<!--</item>-->
+        <!--<item label="XScreensaver Config">
+    		<action name="Execute">
+		<execute>xscreensaver-demo</execute>
+		</action>
+	</item>
+	-->
+	<!--<item label="Shutter">
+	        <action name="Execute">
+		<execute>shutter</execute>
+		</action>
+	</item>
+	-->
+		</menu>
+		<separator/>
+		<item label="obconf">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="restart">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="lock">
+			<action name="Execute">
+			<execute>~/projects/scripts/i3lock.sh</execute>
+		   <!--	<execute>xscreensaver-command -lock</execute>-->
+			</action>
+		</item>
+		<item label="logout">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
