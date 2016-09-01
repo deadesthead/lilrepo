@@ -13,7 +13,7 @@
     <followMouse>yes</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>no</focusLast>
-			<!-- focus the last used window when changing desktops, instead of the one
+    <!-- focus the last used window when changing desktops, instead of the one
        under the mouse pointer. when followMouse is enabled -->
     <underMouse>no</underMouse>
     <!-- move focus under the mouse, even when the mouse is not moving -->
@@ -54,7 +54,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Terminus</name>
@@ -184,14 +184,14 @@
         <command>urxvt</command>
       </action>
     </keybind>
-	<keybind key="A-S-F">
-	  <action name="Execute">
-		<command>./.fehbg</command>
-	  </action>
-	</keybind>
+    <keybind key="A-S-F">
+      <action name="Execute">
+        <command>./.fehbg</command>
+      </action>
+    </keybind>
     <keybind key="A-F">
       <action name="Execute">
-        <command>./.i3lock.sh</command>
+        <command>/home/web/projects/scripts/i3lock.sh</command>
       </action>
     </keybind>
     <!--<keybind key="A-F">
@@ -211,9 +211,20 @@
       </action>
     </keybind>
     <keybind key="A-D">
-	  <action name="Execute">
-		<command>dmenu_run -p web -nb "#000000" -nf "#383838" -sb "#383838" -sf "#ffffff"</command>
-       </action>
+      <action name="Execute">
+        <command>dmenu_run -p web -nb "#000000" -nf "#383838" -sb "#383838" -sf "#ffffff"</command>
+      </action>
+    </keybind>
+	<!-- reload feh-->
+	<keybind key="A-S-R">
+		<action name="Execute">
+		 <command>feh --bg-scale /home/web/pictures/cover_photos/bands/dead/tiedyedead1.jpg</command>
+		</action>
+	</keybind>
+	<keybind key="A-S-T">
+		<action name="Execute">
+		 <command>urxvt -e vim /home/web/documents/arc/notes/to\ do</command>
+		</action>
 	</keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-H">
@@ -241,46 +252,54 @@
       </action>
     </keybind>
     <!--<keybind key="S-A-Left">-->
-      <!--<action name="SendToDesktop">-->
-        <!--<to>left</to>-->
-        <!--<wrap>no</wrap>-->
-      <!--</action>-->
+    <!--<action name="SendToDesktop">-->
+    <!--<to>left</to>-->
+    <!--<wrap>no</wrap>-->
+    <!--</action>-->
     <!--</keybind>-->
     <!--<keybind key="S-A-Right">-->
-      <!--<action name="SendToDesktop">-->
-        <!--<to>right</to>-->
-        <!--<wrap>no</wrap>-->
-      <!--</action>-->
+    <!--<action name="SendToDesktop">-->
+    <!--<to>right</to>-->
+    <!--<wrap>no</wrap>-->
+    <!--</action>-->
     <!--</keybind>-->
     <!--<keybind key="S-A-Up">-->
-      <!--<action name="SendToDesktop">-->
-        <!--<to>up</to>-->
-        <!--<wrap>no</wrap>-->
-      <!--</action>-->
+    <!--<action name="SendToDesktop">-->
+    <!--<to>up</to>-->
+    <!--<wrap>no</wrap>-->
+    <!--</action>-->
     <!--</keybind>-->
     <!--<keybind key="S-A-Down">-->
-      <!--<action name="SendToDesktop">-->
-        <!--<to>down</to>-->
-        <!--<wrap>no</wrap>-->
-      <!--</action>-->
+    <!--<action name="SendToDesktop">-->
+    <!--<to>down</to>-->
+    <!--<wrap>no</wrap>-->
+    <!--</action>-->
     <!--</keybind>-->
     <keybind key="C-A-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-	<keybind key="A-S-1">
-  	  <action name="SendToDesktop"><to>1</to></action>
-	</keybind>
-	<keybind key="A-S-2">
-  	  <action name="SendToDesktop"><to>2</to></action>
-	</keybind>
-	<keybind key="A-S-3">
- 	  <action name="SendToDesktop"><to>3</to></action>
-	</keybind>
-	<keybind key="A-S-4">
-      <action name="SendToDesktop"><to>4</to></action>
-	</keybind>
+    <keybind key="A-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
     <keybind key="C-A-2">
       <action name="GoToDesktop">
         <to>2</to>
@@ -476,8 +495,7 @@
       <mousebind button="Up" action="Click">
         <action name="if">
           <shaded>no</shaded>
-          <then>
-            <action name="Shade"/>
+          <then><action name="Shade"/>
 
 c
 c

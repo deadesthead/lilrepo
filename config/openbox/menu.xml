@@ -13,7 +13,7 @@
 		</item>
 		<item label="web browser">
 			<action name="Execute">
-				<execute>firefox</execute>
+				<execute>chromium</execute>
 			</action>
 		</item>
 		<item label="file manager">
@@ -36,7 +36,7 @@
 		
 		<item label="mail">
 			<action name="Execute">
-				<execute>icedove</execute>
+				<execute>claws-mail</execute>
 			</action>
 		</item>
 		<item label="xmpp">
@@ -50,12 +50,21 @@
 		   <execute> urxvt -e torify irssi</execute>
 		  </action>
 		</item>
+		<item label="to do">
+		  <action name="Execute">
+		   <execute> urxvt -e vim /home/web/documents/arc/notes/to\ do</execute>
+		  </action>
+		</item>
 		<!-- This requires the presence of the 'menu' package to work -->
 		<!-- <menu id="/Debian" />
   <separator />
   <menu id="client-list-menu" />-->
 <menu id="root-menu-36122" label="apps">
-
+	<item label="evince">
+		<action name="Execute">
+		<execute>evince</execute>
+		</action>
+	</item>
 	<item label="vmware">
         <action name="Execute">
 		<execute>vmplayer</execute>
@@ -86,6 +95,11 @@
 		<execute>gimp</execute>
 		</action>
 	</item>
+	<item label="OSRS">
+		<action name="Execute">
+		<execute>java -jar /home/web/downloads/OSBuddy.jar</execute>
+		</action>
+	</item>
         <!--<item label="Thunar">-->
             <!--<action name="Execute">-->
 		<!--<execute>thunar</execute>-->
@@ -104,6 +118,36 @@
 	</item>
 	-->
 		</menu>
+	<menu id="tools" label="tools">
+		<item label="screenshot">
+		 	<action name="Execute">
+			<execute>img</execute>
+			</action>
+		</item>
+		<item label="xrandr on">
+			<action name="Execute">
+			<execute>xrandr --output VGA-1 --auto --left-of LVDS-1 --auto</execute>
+			</action>
+		</item>
+		<item label="xrandr off">
+			<action name="Execute">
+			<execute>xrandr --output VGA-1 off</execute>
+			</action>
+		</item>
+	</menu>
+	<menu id="config-menu" label="config">
+		<item label="menu.xml">
+			<action name="Execute">
+			<execute>urxvt -e vim /home/web/.config/openbox/menu.xml</execute>
+			</action>
+		</item>
+		<item label="rc.xml">
+			<action name="Execute">
+			<execute>urxvt -e vim /home/web/.config/openbox/rc.xml</execute>
+			</action>
+		</item>
+
+	</menu>
 		<separator/>
 		<item label="obconf">
 			<action name="Execute">
