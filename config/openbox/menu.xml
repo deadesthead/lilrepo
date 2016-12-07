@@ -41,7 +41,7 @@
 		</item>
 		<item label="xmpp">
 		  <action name="Execute">
-		  <execute>urxvt -e torify profanity</execute>
+		  <execute>jitsi</execute>
 		  </action>
 		  </item>
 		
@@ -95,11 +95,11 @@
 		<execute>gimp</execute>
 		</action>
 	</item>
-	<item label="OSRS">
-		<action name="Execute">
-		<execute>java -jar /home/web/downloads/OSBuddy.jar</execute>
-		</action>
-	</item>
+	<!--<item label="OSRS">-->
+		<!--<action name="Execute">-->
+		<!--<execute>java -jar /home/web/downloads/OSBuddy.jar</execute>-->
+		<!--</action>-->
+	<!--</item>-->
         <!--<item label="Thunar">-->
             <!--<action name="Execute">-->
 		<!--<execute>thunar</execute>-->
@@ -126,15 +126,20 @@
 		</item>
 		<item label="xrandr on">
 			<action name="Execute">
-			<execute>xrandr --output VGA-1 --auto --left-of LVDS-1 --auto</execute>
+			<execute>xrandr --output VGA-1 --auto --right-of LVDS-1</execute>
 			</action>
 		</item>
 		<item label="xrandr off">
 			<action name="Execute">
-			<execute>xrandr --output VGA-1 off</execute>
+			<execute>xrandr --output VGA-1 --off</execute>
 			</action>
 		</item>
-	</menu>
+		<item label="ssh ser">
+			<action name="Execute">
+			<execute> urxvt -e ssh ser</execute>
+			</action>
+		</item>
+		</menu>
 	<menu id="config-menu" label="config">
 		<item label="menu.xml">
 			<action name="Execute">
@@ -146,7 +151,11 @@
 			<execute>urxvt -e vim /home/web/.config/openbox/rc.xml</execute>
 			</action>
 		</item>
-
+		<item label="autostart.sh">
+			<action name="Execute">
+			<execute>urxvt -e vim /home/web/.config/openbox/autostart.sh</execute>
+			</action>
+		</item>
 	</menu>
 		<separator/>
 		<item label="obconf">
@@ -170,5 +179,12 @@
 		<item label="logout">
 			<action name="Exit"/>
 		</item>
+		<item label="reboot">
+			<action name="/sbin/reboot"/>
+		</item>
+		<item label="shutdown">
+			<action name="/sbin/poweroff"/>
+		</item>
+		
 	</menu>
 </openbox_menu>

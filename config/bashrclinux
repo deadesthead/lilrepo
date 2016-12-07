@@ -8,6 +8,9 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+export EDITOR=vim
+export VISUAL="$EDITOR"
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -61,3 +64,5 @@ if [[ $(($RANDOM % 2)) == 0 ]]; then
 	echo "All you need in life is great software, great beer and some command line magic!"
 fi
 
+#export all_proxy=socks5://127.0.0.1:9050
+#export ALL_PROXY_NO_FALLBACK=1

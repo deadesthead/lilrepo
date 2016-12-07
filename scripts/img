@@ -1,0 +1,22 @@
+clientid=''
+scrot -s "/home/web/tmp/shot.png"
+img="/home/web/tmp/shot.png" 
+
+res=$(curl -sH "Authorization: Client-ID $clientid" -F "image=@$img" "https://api.imgur.com/3/upload")
+
+echo $res | grep -qo '"status":200' && link=$(echo $res | sed -e 's/.*"link":"\([^"]*\).*/\1/' -e 's/\\//g')
+test -n "$link" && (printf $link | xclip; printf "\a" && rm "$img") || echo "$res" > "$img.error"
+
+#{"data":{"id":"BHN2baZ","title":null,"description":null,"datetime":1459568290,"type":"im
+#age\/png","animated":false,"width":670,"height":112,"size":89104,"views":0,"bandwidth":0,"vote":null,"f
+#avorite":false,"nsfw":null,"section":null,"account_url":null,"account_id":0,"comment_preview":null,"del
+#etehash":"rY1jM9SnHrepqCd","name":"","link":"http:\/\/i.imgur.com\/BHN2baZ.png"},"success":true,"status
+#":200}
+
+#data that is received from $res
+#sed -e 's/.*"link":"\([^"]*\).*/\1/' -e 's/\\//g'  removes link":" and anything 
+#before and after it and since they are split be special characters "link":"http:\/\/i.imgur.com\/BHN2baZ.png"}
+#removes everything before and "link":" and everything after and "}
+# \(\/[^"].*\) matches everything from the last ' " ' after the "imgur.com/key" comes. \1 replaces the first matched group
+# -e 's/\\//g' replaces '\' with '/'
+(/[^:]*)
