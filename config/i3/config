@@ -26,14 +26,6 @@
      
     # set wallpaper
   
-
-    #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Anime/Nekomimi/cutegreypink2.jpg
-   
-    #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Anime/SolidColor/1416662898444.png
-   
-    #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Anime/SolidColor/1414461311534.png
-   
-    #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Anime/SolidColor/1414541820929.png
     
     #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Cover_Photos/Red/1427924575163.jpg
     #exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Cover_Photos/Red/1427970127354.jpg
