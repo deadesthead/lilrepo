@@ -37,9 +37,7 @@
 	#exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Cover_Photos/Nature/1405956740393.jpg
     
 	#exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Cover_Photos/Nature/rocksunwater.jpg
-	
-#	exec_always --no-startup-id feh --bg-scale /home/web/Pictures/Anime/SolidColor/1414545312787.png
-#	exec_always --no-startup-id feh --bg-scale /home/web/pictures/cover_photos/abstract/fearisthemother.jpg    
+        #exec_always --no-startup-id feh --bg-scale /home/web/pictures/cover_photos/abstract/fearisthemother.jpg    
 	exec_always --no-startup-id feh --bg-scale /home/web/pictures/thinkcorrect.jpg
      
     # start a terminal
